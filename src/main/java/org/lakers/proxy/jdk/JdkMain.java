@@ -11,7 +11,7 @@ import org.lakers.proxy.SmsServiceImpl;
 public class JdkMain {
 
     public static void main(String[] args) {
-        SmsService proxy = (SmsService) JdkProxyFactory.getProxy(SmsServiceImpl.class);
+        SmsService proxy = (SmsService) JdkProxyFactory.getProxy(new SmsServiceImpl());
         proxy.send("java");
     }
 }
